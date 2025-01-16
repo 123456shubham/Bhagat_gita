@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="0dp"
+    android:layout_marginEnd="0dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/chapter_selector"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingHorizontal="10dp">
+
+    <ImageView
+        android:alpha="0.1"
+        android:visibility="visible"
+        android:src="@drawable/up_left"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/item_view_chapter_count"
+                    android:textColor="@color/orange"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Chapter 1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/item_view_chapter_title"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    android:layout_marginTop="5dp"
+                    android:text="Arjuna Vidya Youg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/item_view_like_slog"
+                android:src="@drawable/baseline_thumb_up_24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/item_view_chapter_desc"
+            android:layout_marginTop="2dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="5dp"
+            android:lines="4"
+            android:textSize="13sp"
+            android:textColor="@color/black"
+            android:ellipsize="end"
+            android:text="now when friends are typing or when they've read your message, share high-resolution images and videos, easily add people to a group chat and experience an all "
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_view_book"
+                android:src="@drawable/baseline_menu_book_24"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+
+            <TextView
+                android:id="@+id/item_view_chapter_count_verses"
+                android:layout_marginStart="20dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_marginTop="5dp"
+                android:text="17 Verses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
+
+

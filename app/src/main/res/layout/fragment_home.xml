@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    tools:context=".view.fragment.HomeFragment">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/kalash"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <TextView
+                android:layout_marginStart="5dp"
+                android:layout_marginEnd="5dp"
+                android:textColor="@color/orange"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Shree Bhagvad Gita"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <ImageView
+                android:layout_gravity="center"
+                android:src="@drawable/kalash"
+                android:layout_width="20dp"
+                android:layout_height="20dp"/>
+            <ImageView
+                android:layout_marginStart="20dp"
+                android:src="@drawable/chakra"
+                android:layout_width="35dp"
+                android:layout_height="35dp"/>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_versa_showing"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:visibility="gone"
+                    android:textColor="@color/orange"
+                    android:text="Verse Of the day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/verse_of_the_day"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/tv_versa_showing"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:textStyle="bold"
+                    android:textSize="14sp"
+                    android:textColor="@color/orange"
+                    android:text="Verse Of the day"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <ImageView
+                    android:alpha="0.2"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/rk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="150dp"/>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:textStyle="bold"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:text="Chapter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        <LinearLayout
+
+            android:layout_marginEnd="10dp"
+            android:layout_marginStart="10dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/home_rv"
+                android:layout_width="match_parent"
+                android:padding="6dp"
+                android:visibility="gone"
+                android:layout_height="wrap_content"/>
+
+
+            <com.facebook.shimmer.ShimmerFrameLayout
+                android:id="@+id/home_shimer"
+                android:padding="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <include layout="@layout/shimer_item_bg"/>
+                    <include layout="@layout/shimer_item_bg"/>
+                    <include layout="@layout/shimer_item_bg"/>
+                </LinearLayout>
+
+            </com.facebook.shimmer.ShimmerFrameLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
